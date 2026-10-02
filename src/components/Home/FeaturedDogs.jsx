@@ -1,6 +1,12 @@
 import dog from "../../assets/heroImage.jpg";
+import axios from "axios";
 
 const FeaturedDogs = () => {
+  const response = axios.get(
+    "https://raw.githubusercontent.com/chineduoscar/dog-api-data/refs/heads/main/dogs.json",
+  );
+  console.log(response);
+
   return (
     <section className="py-10 px-4">
       <div className="max-w-300 mx-auto my-4">
