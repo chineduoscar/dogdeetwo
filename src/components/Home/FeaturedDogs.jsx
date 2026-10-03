@@ -1,11 +1,22 @@
 import dog from "../../assets/heroImage.jpg";
 import axios from "axios";
+import { useState, useEffect } from "react";
 
 const FeaturedDogs = () => {
-  const response = axios.get(
-    "https://raw.githubusercontent.com/chineduoscar/dog-api-data/refs/heads/main/dogs.json",
-  );
-  console.log(response);
+  const [dogs, setDogs] = useState([]);
+
+  useEffect(() => {
+    const fetchDogs = async () => {
+      const response = await axios.get(
+        "https://raw.githubusercontent.com/chineduoscar/dog-api-data/refs/heads/main/dogs.json",
+      );
+      setDogs(response.data);
+    };
+
+    fetchDogs();
+  }, []);
+
+  console.log(dogs);
 
   return (
     <section className="py-10 px-4">
