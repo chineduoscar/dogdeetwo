@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Adopt from "./pages/Adopt";
 import MainLayout from "./layout/MainLayout";
 import AdoptLayout from "./layout/AdoptLayout";
+import SingleDog from "./pages/SingleDog";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/dog/:id" element={<SingleDog />} />
         </Route>
 
         <Route element={<AdoptLayout />}>
