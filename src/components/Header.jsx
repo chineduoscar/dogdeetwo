@@ -33,9 +33,11 @@ const Header = () => {
           </ul>
         </nav>
         <div>
-          <button className="hidden md:block bg-purple-500 rounded-lg py-2 px-4 cursor-pointer text-white ">
-            Adopt Now
-          </button>
+          <Link to={"/adopt"}>
+            <button className="hidden md:block bg-purple-500 rounded-lg py-2 px-4 cursor-pointer text-white ">
+              Adopt Now
+            </button>
+          </Link>
 
           <button className="md:hidden" onClick={handleMenuOpen}>
             <HiOutlineMenuAlt3 size={24} />
